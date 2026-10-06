@@ -1,0 +1,15 @@
+deepspeed --num_gpus=1 summarization_trainer.py \
+  --deepspeed deepspeed/ds_config_zero2.json \
+  --dataset_name alex2awesome/city-council-gpt3-silver-standard-summaries \
+  --output_dir /dev/shm/ \
+  --model_name_or_path t5-base \
+  --per_device_eval_batch_size 2 \
+  --per_device_train_batch_size 2 \
+  --save_strategy epoch \
+  --weight_decay .01 \
+  --max_sequence_length 512 \
+  --fp16 \
+  --cache_dir /dev/shm/ \
+  --do_train \
+  --do_eval \
+  --gradient_accumulation_steps 4 \

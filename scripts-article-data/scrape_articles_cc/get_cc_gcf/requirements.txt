@@ -1,0 +1,4 @@
+newspaper3k==0.2.8
+functions-framework==3.2.1
+flask==2.2.0
+Werkzeug==2.2.2

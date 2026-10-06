@@ -1,0 +1,17 @@
+python basic-homepage-model/trainer.py \
+  --model_name_or_path google/bigbird-roberta-base \
+  --dataset_name data/basic-homepage-placement-labeling.jsonl \
+  --output_dir /dev/shm/big-bird-base__basic-homepage-model \
+  --do_train \
+  --do_eval \
+  --overwrite_output_dir \
+  --report_to null \
+  --per_device_train_batch_size 1 \
+  --per_device_eval_batch_size 1 \
+  --model_type sentence \
+  --evaluation_strategy steps \
+  --eval_steps 1000 \
+  --save_strategy no \
+  --num_train_epochs 3 \
+  --max_num_sentences 2 \
+  --platform gcp

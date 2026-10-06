@@ -1,0 +1,12 @@
+python summarization_trainer.py \
+  --dataset_name city-council-summaries.jsonl \
+  --output_dir /dev/shm/ \
+  --model_name_or_path google/pegasus-x-large \
+  --per_device_eval_batch_size 2 \
+  --per_device_train_batch_size 2 \
+  --save_strategy epoch \
+  --weight_decay .01 \
+  --fp16 \
+  --cache_dir /dev/shm/ \
+  --encoder_layers_to_freeze 0-15 \
+  --decoder_layers_to_freeze 0-14

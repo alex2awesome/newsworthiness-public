@@ -1,0 +1,10 @@
+playwright==1.30.0
+pytimeparse==1.1.8
+setuptools
+waybackpack==0.5.0
+pandas==1.5.3
+scikit-learn==1.2.1
+bs4==0.0.1
+lxml==4.9.2
+tqdm
+jsonlines

@@ -1,0 +1,12 @@
+python summarization_trainer.py \
+  --dataset_name billsum \
+  --output_dir /dev/shm/ \
+  --model_name_or_path t5-large \
+  --per_device_eval_batch_size 1 \
+  --per_device_train_batch_size 2 \
+  --save_strategy epoch \
+  --weight_decay .01 \
+  --fp16 \
+  --cache_dir /dev/shm/ \
+  --do_train \
+  --do_eval
